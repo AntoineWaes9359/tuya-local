@@ -1,0 +1,53 @@
+name: Salt chlorinator
+products:
+  - id: znwak16puku13ysy
+    manufacturer: Poolex
+    model: Aqualyser Flex
+entities:
+  - entity: switch
+    dps:
+      - id: 101
+        type: boolean
+        name: switch
+  - entity: sensor
+    name: Salinity
+    dps:
+      - id: 108
+        type: integer
+        name: sensor
+        unit: g/L
+        class: measurement
+  - entity: sensor
+    class: temperature
+    dps:
+      - id: 111
+        type: integer
+        name: sensor
+        unit: C
+        class: measurement
+  - entity: sensor
+    name: ORP
+    class: voltage
+    dps:
+      - id: 115
+        type: integer
+        name: sensor
+        unit: mV
+        class: measurement
+  - entity: sensor
+    class: ph
+    dps:
+      - id: 117
+        type: integer
+        name: sensor
+        class: measurement
+        mapping:
+          - scale: 10
+  - entity: sensor
+    class: power
+    dps:
+      - id: 121
+        type: integer
+        name: sensor
+        unit: W
+        class: measurement
